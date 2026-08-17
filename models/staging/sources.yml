@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    database: NYC_TAXI_DB
+    schema: RAW
+
+    tables:
+      - name: TAXI_TRIPS_RAW
+        columns:
+          - name: '"trip_id"'
+            tests:
+              - not_null
+
+          - name: '"tpep_pickup_datetime"'
+            tests:
+              - not_null
